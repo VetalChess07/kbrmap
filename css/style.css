@@ -1,0 +1,177 @@
+
+.section {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100%;
+  height: fit-content;
+}
+.wrap {
+  width: 100%;
+
+  
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.svg__map{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.section {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 100vw;
+  flex-direction: column;
+  display: flex;
+  justify-content:start;
+  align-items: start;
+}
+.area{
+   fill: none;
+/* stroke: red;
+stroke-width: 5px; */
+cursor: pointer;
+pointer-events: all;
+}
+.area:hover{
+   animation: fff 2s linear infinite;
+}
+@keyframes fff {
+   0%{
+      stroke: #000;
+      stroke-width: 8px;
+   }
+   50%{
+      stroke: red;
+      stroke-width: 8px;
+
+   }
+   100%{
+      stroke: #000;
+      stroke-width: 8px;
+      stroke-dashoffset: 10px;
+      
+
+   }
+
+}
+path:hover{
+   border: 3px dashed red;
+}
+
+.tooltip{
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px black;
+}
+.nav{
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  
+  width: 100%;
+  max-width: 260px;
+  padding: 30px;
+  background-color: red;
+
+}
+
+.pop-up {
+ 
+ 
+  padding: 5px;
+  background-color: red;
+  opacity: 0;
+}
+.pop-up__box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pop-up.active {
+ 
+  opacity: 1;
+}
+/* .pop-up-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+
+.pop-up__img {
+  width: 100%;
+  max-width: 250px;
+  object-fit: cover;
+}
+.pop-up__title {
+  font-size: 20px;
+}
+.pop-up__text {
+}
+.swiper {
+  width: 100%;
+max-width: 1480px;
+  height: 300px;
+ padding: 40px;
+  margin-top:  40px;
+
+}
+
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
+}
+.point__inner{
+ 
+  width: 100%;
+  background-color: red;
+  
+  position: relative;
+}
+.point{
+ 
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  
+}
+.point1{
+  transform: translate(-385px, 51px);
+}
+
+ @media (max-width:1070px) { 
+  /* body{
+    background-color: red !important;
+  } */
+  .section  {
+    justify-content: center;
+    align-items: start;
+  margin-top: 50px;
+}
+}
+
