@@ -1,0 +1,53 @@
+
+.point{
+   pointer-events: all;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 15;
+  }
+  .point__content{
+   display: none;
+  }
+  .point1{
+    transform: translate(-380px, 33px);
+  }
+  .point2{
+    transform: translate(-180px, 3px);
+  }
+  .point3{
+    transform: translate(20px, 33px);
+  }
+
+
+
+  .pop_up-img {
+   
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+  .pop_up-img__inner {
+   
+  }
+  .pop_up-img__slider-img {
+    
+  }
+
+  .pop_up-img.active {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+  }
+  .pop_up-img__inner.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pop_up-img__slider-img.active {
+    width: 50%;
+    height: 50%;
+  }

@@ -1,11 +1,26 @@
 const tooltip = document.querySelector(".tooltip");
 const area = document.querySelectorAll(".area");
+const wrap = document.querySelector(".wrap");
+const nav = document.querySelector(".nav");
 const popUp = document.querySelector(".pop-up");
 const popUpBox = document.querySelector(".pop-up__box");
+const noContent = document.querySelector(".no__content");
 const popUpBoxImg = document.querySelector(".pop-up__img");
 const popUpBoxTitle = document.querySelector(".pop-up__title");
+const popUpBoxlink = document.querySelector(".pop-up__link");
 const popUpBoxText = document.querySelector(".pop-up__text");
-console.log(popUpBox);
+const popUpcloseBtn = document.querySelector(".pop-up__close");
+const sliderText = document.querySelector(".slider__text");
+const sliderImg1 = document.querySelector(".swiper-slide__img1");
+const sliderImg2 = document.querySelector(".swiper-slide__img2");
+const sliderImg3 = document.querySelector(".swiper-slide__img3");
+// const pointText = document.querySelector(".point__text");
+const sliderImg = document.querySelectorAll(".swiper-slide__img");
+const slider = document.querySelector(".swiper__js");
+
+console.log(slider);
+
+console.log(tooltip.offsetWidth);
 
 area.forEach((area) => {
   area.addEventListener("click", function () {
@@ -13,11 +28,40 @@ area.forEach((area) => {
     //  popUpBox.innerText.this.dataset.title;
     //  popUpBoxText.innerText.this.dataset.description;
     //  popUp.classList.toggle("active");
-
+    popUpcloseBtn.classList.add("active");
+    noContent.style.display = "none";
     popUpBoxTitle.textContent = this.getAttribute("data-title");
+    popUpBoxImg.classList.add("active");
     popUpBoxImg.setAttribute("src", this.getAttribute("data-img"));
+    popUpBoxlink.setAttribute("href", this.getAttribute("data-link"));
     popUpBoxText.textContent = this.getAttribute("data-description");
     popUp.classList.add("active");
+    wrap.classList.add("active");
+    nav.classList.add("active");
+    slider.classList.add("active2");
+    document.body.classList.add("active");
+    popUpBoxlink.classList.add("active");
+    sliderText.textContent = this.getAttribute("data-slider-text");
+    sliderImg1.setAttribute("src", this.getAttribute("data-slider__img1"));
+    sliderImg2.setAttribute("src", this.getAttribute("data-slider__img2"));
+    sliderImg3.setAttribute("src", this.getAttribute("data-slider__img3"));
+  });
+  popUpcloseBtn.addEventListener("click", function () {
+    popUpcloseBtn.classList.remove("active");
+    popUpBoxTitle.textContent = null;
+    // popUpBoxImg.setAttribute("src", this.getAttribute("data-img")) = null;
+    popUpBoxImg.removeAttribute("src");
+    // popUpBoxlink.setAttribute("href", this.getAttribute("data-link")) = null;
+    popUpBoxImg.removeAttribute("href");
+    popUpBoxText.textContent = null;
+    popUp.classList.remove("active");
+    wrap.classList.remove("active");
+    nav.classList.remove("active");
+    document.body.classList.remove("active");
+    popUpBoxlink.classList.remove("active");
+    slider.classList.remove("active2");
+
+    noContent.style.display = "block";
   });
 
   area.addEventListener("mousemove", function (e) {
@@ -30,6 +74,12 @@ area.forEach((area) => {
   });
   area.addEventListener("mouseleave", function () {
     tooltip.style.display = "none";
+  });
+});
+sliderImg.forEach((sliderImg) => {
+  sliderImg.addEventListener("click", function () {
+    popUpBoxImg.src = sliderImg.src;
+    console.log("ff");
   });
 });
 

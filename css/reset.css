@@ -25,6 +25,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #8DBAB5;
 }
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url(../fonts/Roboto-Medium.ttf);
+}
 
 /* Убираем внутренние отступы */
 ul,
@@ -77,11 +85,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Koulen";
+ 
+  color: #FB554C;
+  font-family: 'Montserrat';
 }
 
 p {
-  font-family: "GeneralSans";
+  font-family: 'Roboto-Medium';
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -99,53 +109,28 @@ h1 {
 }
 
 h2 {
-  font-family: "Koulen";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 96px;
-  line-height: 90%;
-  letter-spacing: -0.02em;
-  color: #000;
+
 }
 
 h3 {
   font-family: "Koulen";
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
-  line-height: 42px;
+  font-size: 18px;
+
   letter-spacing: -0.02em;
   color: #000000;
 }
 
-h5 {
-  font-family: "Koulen";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 64px;
-  line-height: 60px;
-  letter-spacing: -0.02em;
-  color: #000;
-}
-
-h6 {
-  font-family: "GeneralSans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 32px;
-  letter-spacing: -0.02em;
-  color: #4E4F51;
-}
 
 button {
   border: none;
 }
 
 body {
-  font-family: "GeneralSans";
+  font-family: 'Roboto-Medium';
   overflow: hidden;
-
+  padding: 0 10px;
   width: 100%;
   margin: 0 auto;
   position: relative;
