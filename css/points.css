@@ -4,19 +4,22 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    z-index: 15;
+    /* z-index: 15; */
   }
   .point__content{
    display: none;
   }
   .point1{
-    transform: translate(-380px, 33px);
+    left: 80%;
+    top: 34%;
   }
   .point2{
-    transform: translate(-180px, 3px);
+    left: 20%;
+    top: 20%;
+    
   }
   .point3{
-    transform: translate(20px, 33px);
+   left: 10%;
   }
 
 

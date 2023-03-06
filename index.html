@@ -4,19 +4,21 @@
 <head>
    <meta charset="utf-8" />
    <title>Map KBR</title>
-   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-   <meta name="viewport" content="width=1024, initial-scale=1"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- <meta name="viewport" content="width=1024, initial-scale=1">  -->
    <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
-   <link rel="stylesheet" href="css/reset.css">
-   <link rel="stylesheet" href="css/style.css">
- 
-<link rel="stylesheet" href="css/points.css">
+   
+<link rel="stylesheet" href="css/reset-dist.css">
+<link rel="stylesheet" href="css/style-dist.css">
+
+<link rel="stylesheet" href="css/points-dist.css">
+</head>
 </head>
 
-<body>
+<body class="noscroll">
   <section class="section">
   
    <div class="wrap">
@@ -105,22 +107,21 @@
          <div class="no__content">
            
             <img class="no__content--img" src="img/no__content.png" alt="">
-         <h3 class="no__content--text">Выберите элемент <br> на карте</h3>
-        
+          <h3 class="no__content--text">Выберите элемент <br> на карте</h3>
+            <button class="close">закрыть подсказку</button>
          </div>
         
+                <div class="pop-up__content-text">
+                  <img class="pop-up__img" src="" alt="">
        
-         <img class="pop-up__img" src="" alt="">
-
-         <div class="pop-up__content-text">
-            <h2 class="pop-up__title">
+                  <h2 class="pop-up__title">
    
          </h2>
          <p class="pop-up__text">
             
          </p>
          <a href="" class="pop-up__link">
-           Узнать подробнее
+           подробнее
          </a>
         
          </div>

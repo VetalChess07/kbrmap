@@ -130,7 +130,7 @@ button {
 body {
   font-family: 'Roboto-Medium';
   overflow: hidden;
-  padding: 0 10px;
+  padding: 0 5px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -140,15 +140,6 @@ body {
 
 }
 
-body.noscroll {
-  overflow: hidden;
-  height: 100%;
-  z-index: 100;
-  width: 100vw;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  scroll-behavior: smooth;
-}
 
 html {
   -webkit-box-sizing: border-box;
@@ -176,12 +167,12 @@ html {
    height: 100%;
 }
 
-.section {
+/* .section {
   margin: 0 auto;
   padding: 0 10px;
-  width: 100vw;
+  
   height: 100vh;
-}
+} */
 .area{
    fill: none;
 /* stroke: red;

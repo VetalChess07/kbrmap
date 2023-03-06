@@ -17,6 +17,18 @@ const sliderImg3 = document.querySelector(".swiper-slide__img3");
 // const pointText = document.querySelector(".point__text");
 const sliderImg = document.querySelectorAll(".swiper-slide__img");
 const slider = document.querySelector(".swiper__js");
+const point1 = document.querySelector(".point1");
+
+const close = document.querySelector(".close");
+
+// let x = point1.offsetTop; // верхний отступ эл-та от родителя
+// let y = point1.offsetLeft;
+// console.log("x=[" + x + "] y=[" + y + "]"); // печатаем координаты
+
+close.addEventListener("click", function () {
+  nav.style.display = "none";
+  document.body.classList.remove("noscroll");
+});
 
 console.log(slider);
 
@@ -37,9 +49,10 @@ area.forEach((area) => {
     popUpBoxText.textContent = this.getAttribute("data-description");
     popUp.classList.add("active");
     wrap.classList.add("active");
-    nav.classList.add("active");
+    nav.style.display = "block";
     slider.classList.add("active2");
     document.body.classList.add("active");
+    nav.classList.add("media");
     popUpBoxlink.classList.add("active");
     sliderText.textContent = this.getAttribute("data-slider-text");
     sliderImg1.setAttribute("src", this.getAttribute("data-slider__img1"));
@@ -56,7 +69,8 @@ area.forEach((area) => {
     popUpBoxText.textContent = null;
     popUp.classList.remove("active");
     wrap.classList.remove("active");
-    nav.classList.remove("active");
+    nav.style.display = "none";
+
     document.body.classList.remove("active");
     popUpBoxlink.classList.remove("active");
     slider.classList.remove("active2");
