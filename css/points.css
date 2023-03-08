@@ -54,3 +54,19 @@
     width: 50%;
     height: 50%;
   }
+  .point:hover{
+    transform: rotate(30deg);
+ transform-origin: center bottom;
+ animation: point 2s linear infinite;
+  }
+  @keyframes point {
+    0%{  transform: rotate(0deg);}
+    25%{  transform: rotate(15deg);}
+    50%{  transform: rotate(0deg);}
+    75%{  transform: rotate(-15deg);}
+    100%{  transform: rotate(-0deg);}
+
+  }
+  .gondons{
+    display: none;
+  }

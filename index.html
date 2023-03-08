@@ -11,6 +11,12 @@
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
    
+<!-- <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/points.css"> -->
+
+
 <link rel="stylesheet" href="css/reset-dist.css">
 <link rel="stylesheet" href="css/style-dist.css">
 
@@ -64,7 +70,14 @@
        data-slider__img1="img/Elbrus_slider.jpg"
        data-slider__img2="img/elbrus_slider2.jpg" 
        data-slider__img3="img/elbrus_slider3.jpg"    
-    
+        data-iframemap="
+        https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d741426.4142041132!2d42.48643114662018!3d43.45648567883
+        7936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x405a068666a62fc3%3A0xcf8a07cdf2651d05!2z0J3QsNC70YzRh9C40LosINCa0LDQsdCw0YD
+        QtNC40L3Qvi3QkdCw0LvQutCw0YDRgdC60LDRjyDQoNC10YHQvy4!3m2!1d43.4846029!2d43.607011799999995!4m5!1s0x405973e88ee6427b%3A0x8c23af94b2a8410a!
+        2z0JPQvtGA0L3QvtC70YvQttC90YvQuSDQutGD0YDQvtGA0YIg0K3Qu9GM0LHRgNGD0YEsINCa0LDQsdCw0YDQtNC40L3Qvi3QkdCw0LvQutCw0YDRgdC60LDRjyDQoNC10YHQvy4
+        sIDM2MTYxNg!3m2!1d43.2660671!2d42.478209299999996!5e0!3m2!1sru!2sru!4v1678279163863!5m2!1sru!2sru
+        
+        "
         >
           
         
@@ -80,6 +93,8 @@
         data-slider__img1="img/Elbrus_slider.jpg"
         data-slider__img2="img/elbrus_slider2.jpg" 
         data-slider__img3="img/elbrus_slider2.jpg"    
+        data-iframemap="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d11580.182451997252!2d43.59099287555616!3d43.48051846603882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x405a068666a62fc3%3A0xcf8a07cdf2651d05!2z0J3QsNC70YzRh9C40LosINCa0LDQsdCw0YDQtNC40L3Qvi3QkdCw0LvQutCw0YDRgdC60LDRjyDQoNC10YHQvy4!3m2!1d43.4846029!2d43.607011799999995!4m5!1s0x405a06a2a5a8d6f3%3A0xbdd8f6c5afa99bf5!2z0JzQpNCmINCa0LDQsdCw0YDQtNC40L3Qvi3QkdCw0LvQutCw0YDRgdC60L7QuSDQoNC10YHQv9GD0LHQu9C40LrQuCwg0YPQu9C40YbQsCDQpdGD0YDQsNC90L7QstCwLCDQndCw0LvRjNGH0LjQug!3m2!1d43.4777565!2d43.5924735!5e0!3m2!1sru!2sru!4v1678281139234!5m2!1sru!2sru"
+        
      
          >
            
@@ -132,11 +147,21 @@
 
 
   </section>
-  <div class="swiper swiper__js">
+  <div class="swiper swiper__js swiper__none">
+    <div class="slider__arrow-box">
+      <button class="close__slaider">
+        закрыть слайдер
+      </button>
+       <div class="swiper-button-prev"></div>
+       <div class="swiper-button-next"></div>
+       <div class="swiper-pagination"></div>
+    </div>
+   
   
    <div class="swiper-wrapper">
     
-     <div class="swiper-slide">       
+     <div class="swiper-slide">   
+     
       <img class="pop-up__img" src="" alt="">
       <h2 class="pop-up__title slider__title">
 
@@ -147,9 +172,12 @@
      </div>
     
      <div class="swiper-slide swiper-slide__item-img">
-     <img class="swiper-slide__img1 swiper-slide__img" src="" alt="">
-     <img class="swiper-slide__img2 swiper-slide__img" src="" alt="">
-    <img class="swiper-slide__img swiper-slide__img3" src="" alt="">
+
+     
+
+     <img class="swiper-slide__img1 swiper-slide__img " src="" alt="">
+     <img class="swiper-slide__img2 swiper-slide__img  " src="" alt="">
+    <img class="swiper-slide__img swiper-slide__img3  " src="" alt="">
 
       
     
@@ -159,22 +187,16 @@
   
 
      <div class="swiper-slide">
-      <img class="pop-up__img" src="" alt="">
-      <h2 class="pop-up__title">
 
-      </h2>
-      <p class="pop-up__text1">
-         
-      </p>
+      <iframe class="iframe__map" src=""  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
      </div>
   
    </div>
  
-   <div class="swiper-pagination"></div>
+
  
    
-   <div class="swiper-button-prev"></div>
-   <div class="swiper-button-next"></div>
+   
  
   
   </div>

@@ -20,6 +20,12 @@ const slider = document.querySelector(".swiper__js");
 const point1 = document.querySelector(".point1");
 
 const close = document.querySelector(".close");
+const closeslider = document.querySelector(".close__slaider");
+const iframeMap = document.querySelector(".iframe__map");
+
+const sliderNoContentImg = document.querySelectorAll(
+  ".swiper-slide__no-conten"
+);
 
 // let x = point1.offsetTop; // верхний отступ эл-та от родителя
 // let y = point1.offsetLeft;
@@ -50,10 +56,12 @@ area.forEach((area) => {
     popUp.classList.add("active");
     wrap.classList.add("active");
     nav.style.display = "block";
-    slider.classList.add("active2");
+    slider.classList.remove("swiper__none");
     document.body.classList.add("active");
     nav.classList.add("media");
     popUpBoxlink.classList.add("active");
+    iframeMap.setAttribute("src", this.getAttribute("data-iframemap"));
+
     sliderText.textContent = this.getAttribute("data-slider-text");
     sliderImg1.setAttribute("src", this.getAttribute("data-slider__img1"));
     sliderImg2.setAttribute("src", this.getAttribute("data-slider__img2"));
@@ -77,6 +85,10 @@ area.forEach((area) => {
 
     noContent.style.display = "block";
   });
+  closeslider.addEventListener("click", function () {
+    slider.classList.add("swiper__none");
+    iframeMap.removeAttribute("src");
+  });
 
   area.addEventListener("mousemove", function (e) {
     tooltip.innerText = this.dataset.title;
@@ -90,6 +102,12 @@ area.forEach((area) => {
     tooltip.style.display = "none";
   });
 });
+sliderNoContentImg.forEach(() => {
+  sliderNoContentImg.addEventListener("click", function () {
+    console.log("хуй");
+  });
+});
+
 sliderImg.forEach((sliderImg) => {
   sliderImg.addEventListener("click", function () {
     popUpBoxImg.src = sliderImg.src;
@@ -105,8 +123,9 @@ const swiper = new Swiper(".swiper", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
   },
-
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
