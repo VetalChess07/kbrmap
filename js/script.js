@@ -72,7 +72,7 @@ area.forEach((area) => {
     wrap.classList.add("active");
     nav.style.display = "block";
     slider.classList.remove("swiper__none");
-    document.body.classList.add("active");
+
     nav.classList.add("media");
     popUpBoxlink.classList.add("active");
     iframeMap.setAttribute("src", this.getAttribute("data-iframemap"));
@@ -144,6 +144,14 @@ burgerBtn.addEventListener("click", function () {
   burgerLineBottom.classList.toggle("active");
   burgerContent.classList.toggle("active");
   burgerInner.classList.toggle("active");
+  document.body.classList.toggle("noscroll");
+});
+burgerInner.addEventListener("click", function (body) {
+  burgerLineTop.classList.toggle("active");
+  burgerLineBottom.classList.toggle("active");
+  burgerContent.classList.toggle("active");
+  burgerInner.classList.toggle("active");
+  document.body.classList.toggle("noscroll");
 });
 
 const swiper = new Swiper(".swiper", {
