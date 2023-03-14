@@ -66,6 +66,7 @@ area.forEach((area) => {
 
     popUpBoxImg.classList.add("active");
     popUpBoxImg.setAttribute("src", this.getAttribute("data-img"));
+    popUpBoxImg.setAttribute("alt", this.getAttribute("data-alt"));
     popUpBoxlink.setAttribute("href", this.getAttribute("data-link"));
     popUpBoxText.textContent = this.getAttribute("data-description");
     popUp.classList.add("active");
