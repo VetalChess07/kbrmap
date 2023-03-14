@@ -17,11 +17,22 @@ const sliderImg3 = document.querySelector(".swiper-slide__img3");
 // const pointText = document.querySelector(".point__text");
 const sliderImg = document.querySelectorAll(".swiper-slide__img");
 const slider = document.querySelector(".swiper__js");
-const point1 = document.querySelector(".point1");
+const point = document.querySelectorAll(".point");
+
+const sliderTitle = document.querySelector(".slider__title");
+const mapText = document.querySelector(".map__text");
+
+const mapTextDescription = document.querySelector(".map__text-description");
 
 const close = document.querySelector(".close");
 const closeslider = document.querySelector(".close__slaider");
 const iframeMap = document.querySelector(".iframe__map");
+const burgerBtn = document.querySelector(".burger__btn");
+const burgerInner = document.querySelector(".burger__inner");
+const burgerContent = document.querySelector(".burger__content");
+const burgerLineTop = document.querySelector(".burger__btn-line--top");
+const burgerLineBottom = document.querySelector(".burger__btn-line--bottom");
+console.log(burgerLineTop);
 
 const sliderNoContentImg = document.querySelectorAll(
   ".swiper-slide__no-conten"
@@ -49,6 +60,10 @@ area.forEach((area) => {
     popUpcloseBtn.classList.add("active");
     noContent.style.display = "none";
     popUpBoxTitle.textContent = this.getAttribute("data-title");
+    sliderTitle.textContent = popUpBoxTitle.textContent;
+    mapText.textContent = this.getAttribute("data-map-text");
+    mapTextDescription.textContent = this.getAttribute("data-map-description");
+
     popUpBoxImg.classList.add("active");
     popUpBoxImg.setAttribute("src", this.getAttribute("data-img"));
     popUpBoxlink.setAttribute("href", this.getAttribute("data-link"));
@@ -68,26 +83,28 @@ area.forEach((area) => {
     sliderImg3.setAttribute("src", this.getAttribute("data-slider__img3"));
   });
   popUpcloseBtn.addEventListener("click", function () {
-    popUpcloseBtn.classList.remove("active");
-    popUpBoxTitle.textContent = null;
-    // popUpBoxImg.setAttribute("src", this.getAttribute("data-img")) = null;
-    popUpBoxImg.removeAttribute("src");
-    // popUpBoxlink.setAttribute("href", this.getAttribute("data-link")) = null;
-    popUpBoxImg.removeAttribute("href");
-    popUpBoxText.textContent = null;
-    popUp.classList.remove("active");
-    wrap.classList.remove("active");
+    // popUpcloseBtn.classList.remove("active");
+    // popUpBoxTitle.textContent = null;
+    // // popUpBoxImg.setAttribute("src", this.getAttribute("data-img")) = null;
+    // popUpBoxImg.removeAttribute("src");
+    // // popUpBoxlink.setAttribute("href", this.getAttribute("data-link")) = null;
+    // popUpBoxImg.removeAttribute("href");
+    // popUpBoxText.textContent = null;
+    // popUp.classList.remove("active");
+    // wrap.classList.remove("active");
     nav.style.display = "none";
 
-    document.body.classList.remove("active");
-    popUpBoxlink.classList.remove("active");
-    slider.classList.remove("active2");
+    // slider.classList.add("swiper__none");
+    // document.body.classList.remove("active");
+    // popUpBoxlink.classList.remove("active");
+    // // slider.classList.remove("active2");
 
-    noContent.style.display = "block";
+    // noContent.style.display = "block";
   });
   closeslider.addEventListener("click", function () {
     slider.classList.add("swiper__none");
     iframeMap.removeAttribute("src");
+    nav.style.display = "none";
   });
 
   area.addEventListener("mousemove", function (e) {
@@ -102,9 +119,15 @@ area.forEach((area) => {
     tooltip.style.display = "none";
   });
 });
+
 sliderNoContentImg.forEach(() => {
   sliderNoContentImg.addEventListener("click", function () {
     console.log("хуй");
+  });
+});
+point.forEach((point) => {
+  point.addEventListener("click", function () {
+    point.classList.add("visited");
   });
 });
 
@@ -112,7 +135,15 @@ sliderImg.forEach((sliderImg) => {
   sliderImg.addEventListener("click", function () {
     popUpBoxImg.src = sliderImg.src;
     console.log("ff");
+    nav.style.display = "block";
   });
+});
+
+burgerBtn.addEventListener("click", function () {
+  burgerLineTop.classList.toggle("active");
+  burgerLineBottom.classList.toggle("active");
+  burgerContent.classList.toggle("active");
+  burgerInner.classList.toggle("active");
 });
 
 const swiper = new Swiper(".swiper", {

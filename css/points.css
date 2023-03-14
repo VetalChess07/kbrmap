@@ -4,8 +4,11 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    /* z-index: 15; */
   }
+  
+.point.visited{
+  content: url(../img/point__active.png);
+}
   .point__content{
    display: none;
   }
@@ -55,7 +58,12 @@
     height: 50%;
   }
   .point:hover{
-    transform: rotate(30deg);
+   
+ transform-origin: center bottom;
+ animation: point 2s linear infinite;
+  }
+  .point.visited:hover{
+    
  transform-origin: center bottom;
  animation: point 2s linear infinite;
   }
@@ -67,6 +75,30 @@
     100%{  transform: rotate(-0deg);}
 
   }
-  .gondons{
-    display: none;
+  .map__item-title{
+    width: 45%;
   }
+  .map__title {
+    font-size: 25px;
+    color: #FB554C;
+    
+   
+  }
+  .map__text,  .map__text-description {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+ 
+  .swiper-slide__map{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+ .iframe__map{
+  max-width: 50%;
+  width: 100%;
+ }
+
+
+  

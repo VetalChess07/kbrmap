@@ -12,9 +12,10 @@
 />
    
 <!-- <link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/points.css">
+<link rel="stylesheet" href="css/style.css"> -->
 
-<link rel="stylesheet" href="css/points.css"> -->
+
 
 
 <link rel="stylesheet" href="css/reset-dist.css">
@@ -25,6 +26,55 @@
 </head>
 
 <body class="noscroll">
+<header class="header">
+  <div class="header__inner">
+    <a href="" class="header__link logo__link">
+      <img class="logo" src="img/logogit.jpg" alt="">
+    </a>
+    <a href="" class="header__link">
+      карта
+    </a>
+    <a href="" class="header__link">
+     документация
+    </a>
+    <a href="" class="header__link">
+      о проекте
+    </a>
+    <a href="" class="header__link">
+      исходный код
+    </a>
+  </div>
+</header>
+
+<div class="burger__btn">
+   <div class="burger__btn-line--top"></div>
+   <div class="burger__btn-line--bottom"></div>
+</div>
+</header>
+
+<div class="burger__inner">
+  
+</div>
+
+
+<div class="burger__content">
+  <a href="" class="header__link logo__link">
+    <img class="logo" src="img/logogit.jpg" alt="">
+  </a>
+  <a href="" class="header__link">
+    карта
+  </a>
+  <a href="" class="header__link">
+   документация
+  </a>
+  <a href="" class="header__link">
+    о проекте
+  </a>
+  <a href="" class="header__link">
+    исходный код
+  </a>
+</div>
+
   <section class="section">
   
    <div class="wrap">
@@ -78,7 +128,15 @@
         sIDM2MTYxNg!3m2!1d43.2660671!2d42.478209299999996!5e0!3m2!1sru!2sru!4v1678279163863!5m2!1sru!2sru
         
         "
+        data-map-text="  1ч 47мин
+        Да, дорога между Нальчик и Эльбрус составляет 113 км. Поездка на машине из Нальчик в Эльбрус займет примерно 1ч 47мин." 
+         data-map-description="Гора Эльбрус Гора Чегет Долина Нарзанов Главный Кавказский хребет Боковой Кавказский хребет Скалистый Кавказский хребет Баксанское ущелье Источники Джилы-Су Голубые озера Чегемские водопады ...
+         Главный Кавказский хребет ...
+         Скалистый Кавказский хребет, Черекское ущелье ...
+         Источники Джилы-Су" 
         >
+        
+        
           
         
         
@@ -123,7 +181,7 @@
            
             <img class="no__content--img" src="img/no__content.png" alt="">
           <h3 class="no__content--text">Выберите элемент <br> на карте</h3>
-            <button class="close">закрыть подсказку</button>
+            <button class="close btn">закрыть подсказку</button>
          </div>
         
                 <div class="pop-up__content-text">
@@ -149,8 +207,8 @@
   </section>
   <div class="swiper swiper__js swiper__none">
     <div class="slider__arrow-box">
-      <button class="close__slaider">
-        закрыть слайдер
+      <button class="close__slaider btn">
+        закрыть
       </button>
        <div class="swiper-button-prev"></div>
        <div class="swiper-button-next"></div>
@@ -166,7 +224,7 @@
       <h2 class="pop-up__title slider__title">
 
       </h2>
-      <p class=" slider__text">
+      <p class="slider__text">
          
       </p> 
      </div>
@@ -186,10 +244,25 @@
      
   
 
-     <div class="swiper-slide">
+     <div class="swiper-slide swiper-slide__map">
 
       <iframe class="iframe__map" src=""  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-     </div>
+      <div class="map__item-title">
+        <h3 class="map__title">
+        Сколько ехать:
+      </h3>
+      <p class="map__text">
+
+      </p>
+      <h3 class="map__title">
+        Что есть рядом:
+      </h3>
+      <p class="map__text-description">
+
+      </p>
+      </div>
+      
+    </div>
   
    </div>
  
@@ -205,6 +278,38 @@
   <div class="tooltip">
 
   </div>
+
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <a href="" class="header__link logo__link">
+        <img class="logo" src="img/logogit.jpg" alt="">
+      </a>
+      <a href="" class="header__link footer__link"  >
+        карта
+      </a>
+      <a href="" class="header__link footer__link"  >
+       документация
+      </a>
+      <a href="" class="header__link footer__link"  >
+        о проекте
+      </a>
+      <a href="" class="header__link footer__link"  >
+        исходный код
+      </a>  
+    </div>
+    <div class="footer__text--item">
+      <p class="footer__text">
+        mapkbr.com ©2023г
+       </p>
+       <a href="" class="footer__text">
+      мой GitHub
+       </a>
+       <a href="" class="footer__text">
+       разработчик: VetalChess07 
+         </a>
+    </div>
+  </footer>
   
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
