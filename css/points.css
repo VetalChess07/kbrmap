@@ -24,9 +24,20 @@
     top: 51%;
     left: 8%;
   }
-
-
-
+  .point4{
+    left: 41%;
+  top: 49%;
+  }
+  .point5{
+    left: 12%;
+    top: 58%;
+    
+  }
+  .point6{
+    left: 9%;
+    top: 57%;
+    
+  }
   .pop_up-img {
    
     position: absolute;

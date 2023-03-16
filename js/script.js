@@ -14,7 +14,6 @@ const sliderText = document.querySelector(".slider__text");
 const sliderImg1 = document.querySelector(".swiper-slide__img1");
 const sliderImg2 = document.querySelector(".swiper-slide__img2");
 const sliderImg3 = document.querySelector(".swiper-slide__img3");
-// const pointText = document.querySelector(".point__text");
 const sliderImg = document.querySelectorAll(".swiper-slide__img");
 const slider = document.querySelector(".swiper__js");
 const point = document.querySelectorAll(".point");
@@ -38,10 +37,6 @@ const sliderNoContentImg = document.querySelectorAll(
   ".swiper-slide__no-conten"
 );
 
-// let x = point1.offsetTop; // верхний отступ эл-та от родителя
-// let y = point1.offsetLeft;
-// console.log("x=[" + x + "] y=[" + y + "]"); // печатаем координаты
-
 close.addEventListener("click", function () {
   nav.style.display = "none";
   document.body.classList.remove("noscroll");
@@ -53,10 +48,6 @@ console.log(tooltip.offsetWidth);
 
 area.forEach((area) => {
   area.addEventListener("click", function () {
-    //  popUpBoxImg.setAttribute("src", this.dataset.img);
-    //  popUpBox.innerText.this.dataset.title;
-    //  popUpBoxText.innerText.this.dataset.description;
-    //  popUp.classList.toggle("active");
     popUpcloseBtn.classList.add("active");
     noContent.style.display = "none";
     popUpBoxTitle.textContent = this.getAttribute("data-title");
@@ -84,23 +75,7 @@ area.forEach((area) => {
     sliderImg3.setAttribute("src", this.getAttribute("data-slider__img3"));
   });
   popUpcloseBtn.addEventListener("click", function () {
-    // popUpcloseBtn.classList.remove("active");
-    // popUpBoxTitle.textContent = null;
-    // // popUpBoxImg.setAttribute("src", this.getAttribute("data-img")) = null;
-    // popUpBoxImg.removeAttribute("src");
-    // // popUpBoxlink.setAttribute("href", this.getAttribute("data-link")) = null;
-    // popUpBoxImg.removeAttribute("href");
-    // popUpBoxText.textContent = null;
-    // popUp.classList.remove("active");
-    // wrap.classList.remove("active");
     nav.style.display = "none";
-
-    // slider.classList.add("swiper__none");
-    // document.body.classList.remove("active");
-    // popUpBoxlink.classList.remove("active");
-    // // slider.classList.remove("active2");
-
-    // noContent.style.display = "block";
   });
   closeslider.addEventListener("click", function () {
     slider.classList.add("swiper__none");
@@ -122,9 +97,7 @@ area.forEach((area) => {
 });
 
 sliderNoContentImg.forEach(() => {
-  sliderNoContentImg.addEventListener("click", function () {
-    console.log("хуй");
-  });
+  sliderNoContentImg.addEventListener("click", function () {});
 });
 point.forEach((point) => {
   point.addEventListener("click", function () {
@@ -156,21 +129,16 @@ burgerInner.addEventListener("click", function (body) {
 });
 
 const swiper = new Swiper(".swiper", {
-  // Optional parameters
-
   loop: true,
 
-  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
     clickable: true,
   },
-  // Navigation arrows
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
-  // And if we need scrollbar
 });
